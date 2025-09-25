@@ -93,8 +93,8 @@ function Login() {
     return (
         <>
             <div className="row justify-content-center bodys" >
-                <div className="col-12 justify-content-center align-items-center d-flex text-white">
-                    <div className="col-4 glassmorph m-5 p-3 pt-4 rounded-4">
+                <div className="col-12 col-sm-10 col-md-10 col-lg-4 justify-content-center align-items-center d-flex text-white">
+                    <div className="col-10 glassmorph m-5 p-3 pt-4 rounded-4">
                         <form onSubmit={submitTest} id="formLogin" method="get" action="#!" className="">
                             <div className="row justify-content-center">
                                 <div className="col-12 avatar text-center mb-3 text-white">
@@ -134,7 +134,6 @@ function Login() {
                     </div>
                 </div>
             </div>
-            <div id="msjFormSend" className="msjFormSend"></div>
             
             <div className="modal fade p-5" id="recuperar_contraseña" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">

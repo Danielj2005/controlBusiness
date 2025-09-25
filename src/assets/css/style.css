@@ -75,6 +75,7 @@ body, #root {
     margin-left: var(--sidebar-width);
     flex: 1;
     transition: all 0.3s;
+    width: 80vw;
 }
 
 /* Top Navigation */
