@@ -15,6 +15,25 @@ function Login() {
 
     const [showPassword, setShowPassword] = useState(false);
     
+    const submitTest = (e) => {
+        e.preventDefault();
+        console.log(values);
+        if (values.cedula == "28587583" && values.password == "12345") {
+            toast.success(`inicio de sesion exitoso`, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce
+            });
+            location.href="http://localhost:5174/home"
+        }
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(values);
@@ -76,7 +95,7 @@ function Login() {
             <div className="row justify-content-center bodys" >
                 <div className="col-12 justify-content-center align-items-center d-flex text-white">
                     <div className="col-4 glassmorph m-5 p-3 pt-4 rounded-4">
-                        <form onSubmit={handleSubmit} id="formLogin" method="get" action="#!" className="">
+                        <form onSubmit={submitTest} id="formLogin" method="get" action="#!" className="">
                             <div className="row justify-content-center">
                                 <div className="col-12 avatar text-center mb-3 text-white">
                                     <h2>Inicio de Sesión </h2>
