@@ -3,10 +3,12 @@ import axios from 'axios';
 // import https from 'https'; // <--- Añade esta línea
 import { useState } from "react";
 import { ToastContainer, toast, Bounce } from 'react-toastify'
-
+import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
+    
+    const navigate = useNavigate();
 
     const [values , setValues ] = useState({
         'cedula': '',
@@ -17,7 +19,7 @@ function Login() {
     
     const submitTest = (e) => {
         e.preventDefault();
-        console.log(values);
+
         if (values.cedula == "28587583" && values.password == "12345") {
             toast.success(`inicio de sesion exitoso`, {
                 position: "top-right",
@@ -30,7 +32,7 @@ function Login() {
                 theme: "dark",
                 transition: Bounce
             });
-            location.href="/home"
+            navigate('/home');
         }
     }
 
