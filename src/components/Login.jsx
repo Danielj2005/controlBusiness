@@ -30,7 +30,7 @@ function Login() {
                 theme: "dark",
                 transition: Bounce
             });
-            location.href="http://localhost:5174/home"
+            location.href="/home"
         }
     }
 
