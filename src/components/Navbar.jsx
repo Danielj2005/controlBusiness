@@ -1,6 +1,7 @@
 
 
-function Navbar() {
+function Navbar({handleSideBar}) {
+
     return (
         <>
         
@@ -8,7 +9,7 @@ function Navbar() {
 
                 <div className="container-fluid">
 
-                    <button className="btn btn-link" id="sidebarToggle">
+                    <button className="btn btn-link" id="sidebarToggle" onClick={handleSideBar} >
                         <i className="bi bi-list"></i>
                     </button>
 

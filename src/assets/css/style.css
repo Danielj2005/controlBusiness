@@ -34,6 +34,10 @@ body, #root {
     z-index: 1000;
 }
 
+.sidebar.show {
+    width: var(--sidebar-width);
+    transform: translateX(0);
+}
 .sidebar-header {
     padding: 20px;
     text-align: center;
@@ -180,7 +184,8 @@ body, #root {
 /* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
-        width: 0;
+        /* width: 0; */
+        /* width: 250px; */
         transform: translateX(-100%);
     }
 
@@ -191,6 +196,7 @@ body, #root {
 
     .main-content {
         margin-left: 0;
+        width: 100vw;
     }
 
     .main-content.sidebar-shown {

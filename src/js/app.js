@@ -1,7 +1,7 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() { 
     // Sidebar toggle
-    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarToggle = document.getElementById('sidebarToggle'); 
     const sidebar = document.querySelector('.sidebar');
     const mainContent = document.querySelector('.main-content');
 
