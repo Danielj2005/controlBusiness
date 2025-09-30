@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Register from './pages/Register'
 import Login from './pages/Login';
+import Singin from './pages/Singin';
 import MainContent from './pages/MainContent';
 import Dashboard from './pages/Dashboard';
 import Clientes from './pages/Clientes';
@@ -15,43 +16,48 @@ function App() {
         <>
             <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<Login/>}></Route>
-                        <Route path="/register" element={<Register/>}></Route>
-                        <Route path="/home" element={
+                        <Route path="/" element={<Login/>} />
+                        <Route path="/register" element={<Register/>} />
+                        <Route path="/home" 
+                            element={
                                 <ProtectedRoute>
                                     <MainContent >
                                         <Dashboard/> 
                                     </MainContent >
                                 </ProtectedRoute>
-                            }></Route>
-                        <Route path="/pedidos" element={
+                            } />
+                        <Route path="/pedidos" 
+                            element={
                                 <ProtectedRoute> 
                                     <MainContent >
                                         <Pedidos /> 
                                     </MainContent>
                                 </ProtectedRoute>
-                            }></Route>
-                        <Route path="/productos" element={
+                            } />
+                        <Route path="/productos" 
+                            element={
                                 <ProtectedRoute> 
                                     <MainContent >
                                         <Productos/>  
                                     </MainContent>
                                 </ProtectedRoute>
-                            }></Route>
-                        <Route path="/clientes" element={
+                            } />
+                        <Route path="/clientes" 
+                            element={
                                 <ProtectedRoute> 
                                     <MainContent >
                                         <Clientes/>  
                                     </MainContent>
                                 </ProtectedRoute>
-                            }></Route>
-                        <Route path="/reportes" element={
+                            } />
+                        <Route path="/reportes" 
+                            element={
                                 <ProtectedRoute> 
                                     <MainContent >
                                         <Reportes/>   
                                     </MainContent>
                                 </ProtectedRoute>
-                            }></Route>
+                            } />
                     </Routes>
             </BrowserRouter>
         </>

@@ -56,6 +56,8 @@ function Login() {
         if (email === undefined || password === undefined) {
             return toast.error("Usuario o contraseña incorrecto.", config);
         }else{
+            const isLoggedIn = sessionStorage.setItem("isLoggedIn", "true");
+            
             toast.success(`Bienvenid@ ${values.email}`, config);
             setTimeout(()=>{
                 navigate('/home');

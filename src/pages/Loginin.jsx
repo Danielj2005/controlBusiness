@@ -5,7 +5,8 @@ import { useState } from "react";
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
-function Login() {
+
+function Loginin() {
     
     const navigate = useNavigate();
     
@@ -30,7 +31,6 @@ function Login() {
     });
 
     const [showPassword, setShowPassword] = useState(false);
-    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -41,7 +41,7 @@ function Login() {
                 password: values.password,
             })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 if (response.data !== "") {
                     toast.success(`${response.data.message}`, config);
                 }
@@ -144,4 +144,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Loginin
