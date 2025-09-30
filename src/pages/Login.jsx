@@ -18,7 +18,7 @@ function Login() {
     {
         dni: "30887827",
         name: "Katty",
-        email: "kattybarrueta@gmail.com",
+        email: "kattyrondon506@gmail.com",
         password: "30887827",
     },
     ];
